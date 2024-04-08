@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 
 const useCustomHook = (url) => {
@@ -19,9 +20,7 @@ const useCustomHook = (url) => {
 
     fetchData();
 
-    // Cleanup function (optional)
     return () => {
-      // Any cleanup code can go here if needed
     };
   }, [url]);
 
