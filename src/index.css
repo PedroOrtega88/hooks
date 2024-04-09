@@ -25,10 +25,22 @@ a:hover {
 body {
   margin: 0;
   display: flex;
+  align-items: center;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+ 
 }
+
+div {
+
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 150px;
+
+ 
+}
+
 
 h1 {
   font-size: 3.2em;

@@ -1,20 +1,22 @@
 
 import { useState, useEffect } from 'react';
 
-const useCustomHook = (url) => {
+export const useCustomHook = (url) => {
   const [data, setData] = useState(null);
+  const [loading,setLoading]= useState(true)
+  
 
   useEffect(() => {
-    const fetchData = async () => {
+     const fetchData = async () => {
       try {
         const response = await fetch(url);
         if (!response.ok) {
-          throw new Error('Network response was not ok');
+          throw new Error('eror');
         }
         const jsonData = await response.json();
         setData(jsonData);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error('Error :', error);
       }
     };
 
